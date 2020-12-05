@@ -17,8 +17,10 @@ class CrawlerIndeed():
 			self.send_log_system('ERROR', 'Syntax de execução incorreta. Correta : python indeed.py Cargo Cidade')
 			quit()
 
+        self.send_log_system('DEBUG', 'Start Crawler')
 		self.search_job(position, city)
 		self.fileVacancy.close()
+        self.send_log_system('DEBUG', 'Finish Crawler')
 
 	def send_log_system(self, type_message, message):
 		print (f'[ {type_message} ] {message}')
